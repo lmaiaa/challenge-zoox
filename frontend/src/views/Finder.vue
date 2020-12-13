@@ -68,21 +68,43 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "@vue/composition-api";
+import {
+  defineComponent,
+  onMounted,
+  reactive,
+  ref,
+} from "@vue/composition-api";
 import ButtonDefault from "../components/buttons/Button.vue";
 
 import ComboboxDefault from "../components/selects/Combobox.vue";
 import { City, State } from "../store";
+import { ICity, IState } from "../types";
 
 export default defineComponent({
   components: { ComboboxDefault, ButtonDefault },
   setup() {
     const state = ref("");
     const states = State.getters.allStates;
-    const stateSelect = ref("");
+    const stateSelect = reactive<{ value: IState }>({
+      value: {
+        _id: "",
+        name: "",
+        initials: "",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+    });
     const city = ref("");
     const cities = City.getters.allCitiesOfState;
-    const citySelect = ref("");
+    const citySelect = reactive<{ value: ICity }>({
+      value: {
+        _id: "",
+        name: "",
+        _stateId: "",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+    });
     const stateDisabled = ref(false);
     const cityDisabled = ref(false);
     onMounted(async () => {
@@ -92,14 +114,12 @@ export default defineComponent({
     });
 
     const toggleSelectState = () => {
-      console.log("aqui");
       stateDisabled.value = !stateDisabled.value;
     };
     const toggleSelectCity = () => {
       cityDisabled.value = !cityDisabled.value;
     };
     const searchState = async () => {
-      console.log(state.value);
       for (let i = 0; i < states.value.length; i++) {
         if (
           states.value[i].name.toUpperCase() === state.value ||
@@ -112,10 +132,7 @@ export default defineComponent({
     };
     const searchCity = () => {
       for (let i = 0; i < cities.value.length; i++) {
-        if (
-          cities.value[i].name === city.value ||
-          cities.value[i].initials === city.value
-        ) {
+        if (cities.value[i].name === city.value) {
           citySelect.value = cities.value[i];
         }
       }

@@ -5,11 +5,11 @@ frontend/node_modules
 
 frontend/.DS_Store
 frontend/dist
+frontend/.env.production
 
-
-# local env files
-frontend/.env.local
-frontend/.env.*.local
+frontend/firebase.json
+frontend/.firebaserc
+frontend/.firebase
 
 # Log files
 frontend/npm-debug.log*
@@ -25,3 +25,5 @@ frontend/*.ntvs*
 frontend/*.njsproj
 frontend/*.sln
 frontend/*.sw?
+
+backend/node_modules
