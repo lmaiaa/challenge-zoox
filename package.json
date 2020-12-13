@@ -1,0 +1,12 @@
+{
+    "name": "challenge-zoox",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "install-dependencies": "concurrently -r  \"cd frontend && npm install\" \"cd backend && npm install\"",
+        "start": "concurrently -r  \"cd frontend && npm run serve\" \"cd backend && npm run dev\""
+    },
+    "dependencies": {
+        "concurrently": "^5.2.0"
+    }
+}
