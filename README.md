@@ -13,10 +13,7 @@ Já exposto, foi utilizado framework VueJs e para inicialização do projeto foi
 É necessário a instalação do NodeJs 12.X, MongoDB e GIT para inicialização do projeto.
 
 - **Instalação do NodeJs:** [Acesse aqui](https://nodejs.org/en/download/) e realize o download do NodeJs 12.X
-- **Instalação do MongoDB:** Realize o download do instalador [aqui](https://www.mongodb.com/try/download/community).
 - **Instalação do GIT:** Realize o download [aqui](https://git-scm.com/downloads) e realize a instalção.
-
-_Obs.: Não é necessário a instalação caso utilize o Docker. Para instalção do Docker, acesse [aqui](https://www.docker.com/products/docker-desktop)_
 
 Realizado as configurações vamos para a próxima etapa.
 
@@ -29,16 +26,6 @@ Execute o comando
 ```
 git clone https://github.com/lmaiaa/challenge-zoox.git
 ```
-
-- **Com Docker:**
-
-Acesse a pasta clonada e inicialize o projeto com o seguinte comando:
-
-```
-docker-composer up -d
-```
-
-- **Sem Docker:**
 
 Acesse a pasta clonada e instale as dependências
 
@@ -63,6 +50,12 @@ Ao inicializar o projeto:
 
 - API pode ser acessada em: **http://localhost:3333**
 - Client (Frontend) pode ser acessado em: **http://localhost:8080**
+
+
+## MongoDB
+
+Vale ressaltar a utilização de um Cluster no MongoAtlas nesse projeto. Você pode verificar que há um host no .env no backend. Tais credenciais foi disponibilizada a fim de teste do projeto e ao fim do processo seletivo tal Cluster será excluído.
+*Caso queira testar tal repositorío após o fim do processo seletivo, basta reconfigurar o MongoDB informando o seu host nesse .env.* 
 
 ## Rotas
 
