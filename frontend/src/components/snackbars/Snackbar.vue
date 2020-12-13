@@ -11,13 +11,12 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType } from "@vue/composition-api";
-import * as Types from "../../types";
+import { computed, defineComponent } from "@vue/composition-api";
 
 export default defineComponent({
   props: {
     snackbar: {
-      type: Object as PropType<Types.Notification>,
+      type: Object,
       required: true,
     },
     timeout: { type: Number },
