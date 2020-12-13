@@ -2,7 +2,7 @@
 
 ## Sobre o Projeto
 
-O projeto é um buscador de estados e cidade, para isso foi criado uma API RESTFULL capaz de realizar a criação, atualização, exclusão e listagem de estados e cidades. Além disso foi criado uma SPA (Single Page Application) que permite de forma intuitiva a utilização das funções básica da API.
+O projeto é um buscador de estados e cidade, para isso foi criado uma API REST capaz de realizar a criação, atualização, exclusão e listagem de estados e cidades. Além disso foi criado uma SPA (Single Page Application) que permite de forma intuitiva a utilização das funções básica da API.
 
 **Tecnologias**: MongoDB - NodeJs (Typescript) - VueJs 2.x (utilizando a [composition-api](https://composition-api.vuejs.org/) + typescript) (Framework JavaScript).
 
