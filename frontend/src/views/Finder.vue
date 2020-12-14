@@ -32,11 +32,11 @@
             >Alterar Estado</i
           >
         </div>
-        <div class="state-select" v-if="stateSelect">
-          <span>Sigla: {{ stateSelect.initials.toUpperCase() }}</span>
+        <div class="state-select" v-if="stateSelect.value.name !== ''">
+          <span>Sigla: {{ stateSelect.value.initials.toUpperCase() }}</span>
         </div>
       </div>
-      <div class="finder-city" v-if="stateSelect !== ''">
+      <div class="finder-city" v-if="stateSelect.value.name !== ''">
         <div class="cities" v-if="cities.length">
           <div class="fider-city__title">
             <h3>CIDADE</h3>
