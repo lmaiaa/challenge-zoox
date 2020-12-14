@@ -28,7 +28,6 @@ export default defineComponent({
   name: "Modal",
   components: { DeleteButton },
   setup() {
-    console.log("modal");
     const show = ref(false);
     const closeModal = () => {
       show.value = false;

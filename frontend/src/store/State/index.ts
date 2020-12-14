@@ -29,8 +29,6 @@ export const mutations = {
     state.allStates.push(State);
   },
   UPDATE_STATE: (newState: Types.IState) => {
-    console.log();
-
     const oldState = state.allStates.find((s) => s._id === newState._id);
     if (oldState) {
       oldState.name = newState.name;
