@@ -10,7 +10,7 @@ Já exposto, foi utilizado framework VueJs e para inicialização do projeto foi
 
 ## Requisitos necessários
 
-É necessário a instalação do NodeJs 12.X, MongoDB e GIT para inicialização do projeto.
+É necessário a instalação do NodeJs 12.X e GIT para inicialização do projeto.
 
 - **Instalação do NodeJs:** [Acesse aqui](https://nodejs.org/en/download/) e realize o download do NodeJs 12.X
 - **Instalação do GIT:** Realize o download [aqui](https://git-scm.com/downloads) e realize a instalção.
