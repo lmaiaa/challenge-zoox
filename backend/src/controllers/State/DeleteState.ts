@@ -21,13 +21,10 @@ export default async (req: Request, res: Response) => {
       const response = await StateCrud.deleteById(_id);
       if (response) {
         const cities = await CityCrud.find({ _stateId: response._id });
-        console.log(cities);
         if (cities.length) {
-          Promise.all(
-            cities.map(async city => {
-              return await CityCrud.deleteById(String(city._id));
-            }),
-          );
+          for await (const city of cities) {
+            await CityCrud.deleteById(String(city._id));
+          }
         }
       }
       res.send(response);
